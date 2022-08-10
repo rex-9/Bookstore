@@ -1,6 +1,6 @@
-# Math Magicians
+# BookStore
 
-> The amazing Math Magicians project will let you perform any basic
+> The amazing BookStore project will let you perform any basic
 > math calculations you want to perform.
 
 ## Built With
@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-[Math-Magicians](https://mathgic.netlify.app/)
+[BookStore](https://bookstore.netlify.app/)
 
 ## Getting Started
 
@@ -17,11 +17,11 @@ To get a local copy up and running:
 
 1. Clone this repository or download the zip folder:
 
-**`git clone https://github.com/HtetNaing0814/Math-Magicians.git`**
+**`git clone https://github.com/HtetNaing0814/BookStore.git`**
 
 2. Navigate to the location of the folder in your machine:
 
-**`you@your-Pc-name:~$ cd Math-Magicians`**
+**`you@your-Pc-name:~$ cd BookStore`**
 
 3. Open the project with VScode:
 
@@ -37,7 +37,7 @@ To get a local copy up and running:
 
 ### Deployment
 
-Here is the online version of [Math-Magicians](https://mathgic.netlify.app/)
+Here is the online version of [BookStore](https://bookstore.netlify.app/)
 
 ## Author
 
@@ -52,7 +52,7 @@ Here is the online version of [Math-Magicians](https://mathgic.netlify.app/)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check [issue page](https://github.com/HtetNaing0814/Math-Magicians/issues).
+Feel free to check [issue page](https://github.com/HtetNaing0814/BookStore/issues).
 
 ## Show your support
 
