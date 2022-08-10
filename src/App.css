@@ -1,0 +1,18 @@
+body {
+  font-family: 'Montserrat', Courier, monospace;
+  background-color: #f5f6fa;
+}
+
+nav, #menu, ul {
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+}
+
+li {
+  background-color: red;
+  list-style-type: none;
+  padding: 0 0 0 20px;
+}
