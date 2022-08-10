@@ -3,7 +3,9 @@ body {
   background-color: #f5f6fa;
 }
 
-nav, #menu, ul {
+nav,
+#menu,
+ul {
   background-color: blue;
   display: flex;
   justify-content: space-between;
