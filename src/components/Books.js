@@ -1,15 +1,23 @@
+/* eslint-disable max-len */
+
 import { useState } from 'react';
 
 import Book from './Book';
 import AddBook from './AddBook';
+import store from '../redux/configureStore';
 
 const Books = () => {
-  const [books] = useState([{ id: 1, title: 'Elden Ring', author: 'Miyazaki' }, { id: 2, title: 'One Piece', author: 'Eichiro Oda' }]);
+  const booksState = store.getState().books;
+  const [books, setBooks] = useState(booksState);
+
+  const listenChanges = () => {
+    setBooks(store.getState().books);
+  };
 
   return (
     <>
-      {books.map((book) => <Book key={book.id} title={book.title} author={book.author} />)}
-      <AddBook />
+      {books.map((book) => <Book key={book.id} id={book.id} title={book.title} author={book.author} listenChanges={listenChanges} />)}
+      <AddBook listenChanges={listenChanges} />
     </>
   );
 };
