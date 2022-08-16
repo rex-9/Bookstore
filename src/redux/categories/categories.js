@@ -1,6 +1,6 @@
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-const initState = [];
+const initState = '';
 
 const cateXer = (state = initState, action) => {
   switch (action.type) {

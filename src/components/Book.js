@@ -1,15 +1,16 @@
 import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
-import store from '../redux/configureStore';
 
 const Book = (props) => {
+  const dispatch = useDispatch();
+
   const {
-    id, title, author, listenChanges,
+    id, title, author,
   } = props;
 
   const clickRemove = () => {
-    store.dispatch(removeBook(id));
-    listenChanges();
+    dispatch(removeBook(id));
   };
 
   return (
@@ -25,7 +26,6 @@ Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  listenChanges: PropTypes.func.isRequired,
 };
 
 export default Book;
