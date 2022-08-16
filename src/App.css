@@ -1,0 +1,48 @@
+body {
+  font-family: 'Montserrat', Courier, monospace;
+  background-color: #f5f6fa;
+}
+
+nav,
+#menu,
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px 10px 100px;
+}
+
+li {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+#bookCard {
+  padding: 15px 30px 15px 30px;
+  margin: 25px 30px 25px 30px;
+  background-color: white;
+}
+
+#title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#addBook {
+  padding: 15px 30px 15px 30px;
+  margin: 25px 30px 25px 30px;
+}
+
+#addBook .container {
+  display: grid;
+  grid-template-columns: 4fr 4fr 2fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+input {
+  height: 40px;
+  padding-left: 20px;
+}
