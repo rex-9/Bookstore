@@ -19,9 +19,7 @@ const AddBook = () => {
   };
 
   const clickAdd = () => {
-    if (title === '' || author === '') {
-      console.log('form is empty');
-    } else {
+    if (title !== '' && author !== '') {
       dispatch(addBook({ id: uuidv4(), title, author }));
       setTitle('');
       setAuthor('');
