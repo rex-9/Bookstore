@@ -1,32 +1,29 @@
-const ADD = 'ADD_BOOK';
-const REMOVE = 'REMOVE_BOOK';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const booksXer = (state = [{ id: '1', title: 'Elden Ring', author: 'Miyazaki' }, { id: '2', title: 'One Piece', author: 'Eichiro Oda' }], action) => {
+const initState = [{ id: '1', title: 'Elden Ring', author: 'Miyazaki' }, { id: '2', title: 'One Piece', author: 'Eichiro Oda' }];
+
+const booksXer = (state = initState, action) => {
   switch (action.type) {
-    case ADD:
+    case ADD_BOOK:
       return [
         ...state,
         action.book,
       ];
-    case REMOVE:
+    case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.index);
-    //   [
-    //     ...state.slice(0, action.index),
-    //     ...state.slice(action.index + 1),
-    //   ];
-      // state.filter((book) => book.id !== action.index);
     default:
       return state;
   }
 };
 
 const addBook = (book) => ({
-  type: ADD,
+  type: ADD_BOOK,
   book,
 });
 
 const removeBook = (index) => ({
-  type: REMOVE,
+  type: REMOVE_BOOK,
   index,
 });
 

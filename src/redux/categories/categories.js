@@ -1,8 +1,10 @@
-const STATUS = 'UNDER_CONSTRUCTION';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-const cateXer = (state = [], action) => {
+const initState = [];
+
+const cateXer = (state = initState, action) => {
   switch (action.type) {
-    case STATUS:
+    case CHECK_STATUS:
       return 'Under construction';
     default:
       return state;
@@ -10,7 +12,7 @@ const cateXer = (state = [], action) => {
 };
 
 const checkStatus = () => ({
-  type: STATUS,
+  type: CHECK_STATUS,
 });
 
 export default cateXer;
