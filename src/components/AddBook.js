@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import PropTypes from 'prop-types';
 
 import { addBook } from '../redux/books/books';
-import store from '../redux/configureStore';
 
-const AddBook = (props) => {
+const AddBook = () => {
+  const dispatch = useDispatch();
+
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
@@ -18,14 +19,10 @@ const AddBook = (props) => {
   };
 
   const clickAdd = () => {
-    const { listenChanges } = props;
-    if (title === '' || author === '') {
-      console.log('form is empty');
-    } else {
-      store.dispatch(addBook({ id: uuidv4(), title, author }));
+    if (title !== '' && author !== '') {
+      dispatch(addBook({ id: uuidv4(), title, author }));
       setTitle('');
       setAuthor('');
-      listenChanges();
     }
   };
 
@@ -39,10 +36,6 @@ const AddBook = (props) => {
       </div>
     </div>
   );
-};
-
-AddBook.propTypes = {
-  listenChanges: PropTypes.func.isRequired,
 };
 
 export default AddBook;

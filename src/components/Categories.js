@@ -1,10 +1,15 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
-import store from '../redux/configureStore';
 
 const Categories = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(checkStatus());
+  }, []);
+
   const clickCheckStatus = () => {
-    store.dispatch(checkStatus());
-    console.log(store.getState().categories);
+    dispatch(checkStatus());
   };
   return (<button type="button" onClick={clickCheckStatus}>Check Status</button>);
 };

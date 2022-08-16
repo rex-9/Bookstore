@@ -1,23 +1,17 @@
 /* eslint-disable max-len */
 
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import Book from './Book';
 import AddBook from './AddBook';
-import store from '../redux/configureStore';
 
 const Books = () => {
-  const booksState = store.getState().books;
-  const [books, setBooks] = useState(booksState);
-
-  const listenChanges = () => {
-    setBooks(store.getState().books);
-  };
+  const books = useSelector((state) => state.books);
 
   return (
     <>
-      {books.map((book) => <Book key={book.id} id={book.id} title={book.title} author={book.author} listenChanges={listenChanges} />)}
-      <AddBook listenChanges={listenChanges} />
+      {books.map((book) => <Book key={book.id} id={book.id} title={book.title} author={book.author} />)}
+      <AddBook />
     </>
   );
 };
