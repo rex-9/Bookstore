@@ -1,5 +1,8 @@
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
+import axios from 'axios';
+import api from './api';
+
 import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
@@ -9,7 +12,8 @@ const Book = (props) => {
     id, title, author,
   } = props;
 
-  const clickRemove = () => {
+  const clickRemove = async () => {
+    await axios.delete(`${api}/apps/wGWGzFIDteiCaiSsBeV3/books/${id}`);
     dispatch(removeBook(id));
   };
 
