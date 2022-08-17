@@ -34,36 +34,39 @@ li {
   padding-left: 20px;
 }
 
-#bookCard {
+.bookCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 30px 15px 30px;
   margin: 25px 30px 25px 30px;
   background-color: white;
 }
 
-#category {
+.category {
   font-size: 14px;
   color: #8d8d8d;
 }
 
-#title {
+.title {
   padding: 5px 0 0 0;
   font-size: 25px;
   font-weight: bold;
 }
 
-#author {
+.author {
   font-family: 'RobotoSlab-Thin', serif;
   padding: 5px 0 15px 0;
   color: #4386bf;
 }
 
-#comments,
-#remove {
+.comments,
+.remove {
   border: none;
   border-right: 2px solid #afb1b3;
 }
 
-#edit {
+.edit {
   border: none;
 }
 
@@ -73,7 +76,7 @@ input,
   padding-left: 20px;
 }
 
-#bookCard button {
+.bookCard button {
   background: none;
   padding: 0 10px 0 0;
   margin-right: 10px;
@@ -84,8 +87,24 @@ input,
   outline: inherit;
 }
 
-#bookCard button:hover {
+.bookCard button:hover {
   color: #9bb3c6;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: solid 5px #e8e8e8;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, var(--medium-blue), #379cf6);
+  border-image-slice: 1;
 }
 
 #addBook {

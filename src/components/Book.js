@@ -18,13 +18,19 @@ const Book = (props) => {
   };
 
   return (
-    <div id="bookCard">
-      <div id="category">{category}</div>
-      <div id="title">{title}</div>
-      <div id="author">{author}</div>
-      <button id="comments" type="button">Comments</button>
-      <button id="remove" type="button" onClick={clickRemove}>Remove</button>
-      <button id="edit" type="button">Edit</button>
+    <div className="bookCard">
+      <div>
+        <div className="category">{category}</div>
+        <div className="title">{title}</div>
+        <div className="author">{author}</div>
+        <button className="comments" type="button">Comments</button>
+        <button className="remove" type="button" onClick={clickRemove}>Remove</button>
+        <button className="edit" type="button">Edit</button>
+      </div>
+      <div className="progress">
+        <div><div className="circle" /></div>
+        <div>Chapter</div>
+      </div>
     </div>
   );
 };
