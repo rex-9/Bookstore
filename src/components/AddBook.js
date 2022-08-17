@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 
 import { addBook } from '../redux/books/books';
+import api from './api';
 
 const AddBook = () => {
   const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const changeTitle = (e) => {
     setTitle(e.target.value);
@@ -18,12 +21,19 @@ const AddBook = () => {
     setAuthor(e.target.value);
   };
 
-  const clickAdd = () => {
-    if (title !== '' && author !== '') {
-      dispatch(addBook({ id: uuidv4(), title, author }));
-      setTitle('');
-      setAuthor('');
-    }
+  const changeCategory = (e) => {
+    setCategory(e.target.value);
+  };
+
+  const postBook = async () => {
+    const newBook = await axios.post(`${api}/apps/wGWGzFIDteiCaiSsBeV3/books`, {
+      item_id: uuidv4(),
+      title,
+      author,
+      category,
+    });
+    dispatch(addBook(newBook));
+    window.location.reload();
   };
 
   return (
@@ -31,8 +41,9 @@ const AddBook = () => {
       <h2>Add Book</h2>
       <div className="container">
         <input type="text" placeholder="Add Title" value={title} onChange={changeTitle} />
-        <input type="text" placeholder="Add Author" value={author} onChange={changeAuthor} onKeyPress={(e) => e.key === 'Enter' && clickAdd()} />
-        <button type="button" onClick={clickAdd}>Add Book</button>
+        <input type="text" placeholder="Add Author" value={author} onChange={changeAuthor} />
+        <input type="text" placeholder="Add Category" value={category} onChange={changeCategory} onKeyPress={(e) => e.key === 'Enter' && postBook()} />
+        <button type="button" onClick={title !== '' && author !== '' && category !== '' ? postBook : () => console.log('form is empty')}>Add Book</button>
       </div>
     </div>
   );
