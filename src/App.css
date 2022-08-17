@@ -42,7 +42,7 @@ li {
 
 #category {
   font-size: 14px;
-  color: #8D8D8D;
+  color: #8d8d8d;
 }
 
 #title {
@@ -52,34 +52,40 @@ li {
 }
 
 #author {
-  font-family: 'RobotoSlab-Thin';
+  font-family: 'RobotoSlab-Thin', serif;
   padding: 5px 0 15px 0;
   color: #4386bf;
 }
 
-#comments, #remove {
+#comments,
+#remove {
   border: none;
-	border-right: 2px solid #afb1b3;
+  border-right: 2px solid #afb1b3;
 }
 
 #edit {
   border: none;
 }
 
+input,
+#addBook button {
+  height: 40px;
+  padding-left: 20px;
+}
+
 #bookCard button {
   background: none;
-	color: inherit;
-	padding: 0 10px 0 0;
-	margin-right: 10px;
-	font-family: 'RobotoSlab-Light';
+  padding: 0 10px 0 0;
+  margin-right: 10px;
+  font-family: 'RobotoSlab-Thin', serif;
   font-size: 15px;
   color: #4386bf;
-	cursor: pointer;
-	outline: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 #bookCard button:hover {
-  color: #9bb3c6
+  color: #9bb3c6;
 }
 
 #addBook {
@@ -94,10 +100,4 @@ li {
   grid-row-gap: 20px;
   justify-items: stretch;
   align-items: stretch;
-}
-
-input,
-#addBook button {
-  height: 40px;
-  padding-left: 20px;
 }
