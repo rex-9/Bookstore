@@ -9,25 +9,29 @@ const Book = (props) => {
   const dispatch = useDispatch();
 
   const {
-    id, title, author,
+    id, category, title, author,
   } = props;
 
   const clickRemove = async () => {
-    await axios.delete(`${api}/apps/wGWGzFIDteiCaiSsBeV3/books/${id}`);
+    await axios.delete(`${api}${id}`);
     dispatch(removeBook(id));
   };
 
   return (
     <div id="bookCard">
-      <p id="title">{title}</p>
-      <p id="author">{author}</p>
-      <button type="button" onClick={clickRemove}>Remove</button>
+      <div id="category">{category}</div>
+      <div id="title">{title}</div>
+      <div id="author">{author}</div>
+      <button id="comments" type="button">Comments</button>
+      <button id="remove" type="button" onClick={clickRemove}>Remove</button>
+      <button id="edit" type="button">Edit</button>
     </div>
   );
 };
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };

@@ -1,5 +1,17 @@
+@font-face {
+  font-family: 'RobotoSlab';
+  src: local('RobotoSlab'), url(./assets/RobotoSlab-Medium.ttf) format('woff');
+  src: local('RobotoSlab-Regular'), url(./assets/RobotoSlab-Regular.ttf) format('woff');
+  src: local('RobotoSlab-Light'), url(./assets/RobotoSlab-Light.ttf) format('woff');
+  src: local('RobotoSlab-Thin'), url(./assets/RobotoSlab-Thin.ttf) format('woff');
+  src: local('RobotoSlab-Black'), url(./assets/RobotoSlab-Black.ttf) format('woff');
+  src: local('RobotoSlab-Bold'), url(./assets/RobotoSlab-Bold.ttf) format('woff');
+  src: local('RobotoSlab-ExtraBold'), url(./assets/RobotoSlab-ExtraBold.ttf) format('woff');
+  src: local('RobotoSlab-SemiBold'), url(./assets/RobotoSlab-SemiBold.ttf) format('woff');
+}
+
 body {
-  font-family: 'Montserrat', Courier, monospace;
+  font-family: 'RobotoSlab', 'Quicksand', monospace;
   background-color: #f5f6fa;
 }
 
@@ -10,6 +22,11 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 10px 100px 10px 100px;
+}
+
+#menu header {
+  font-size: 1.875rem;
+  color: #0290ff;
 }
 
 li {
@@ -23,9 +40,46 @@ li {
   background-color: white;
 }
 
+#category {
+  font-size: 14px;
+  color: #8D8D8D;
+}
+
 #title {
+  padding: 5px 0 0 0;
   font-size: 25px;
   font-weight: bold;
+}
+
+#author {
+  font-family: 'RobotoSlab-Thin';
+  padding: 5px 0 15px 0;
+  color: #4386bf;
+}
+
+#comments, #remove {
+  border: none;
+	border-right: 2px solid #afb1b3;
+}
+
+#edit {
+  border: none;
+}
+
+#bookCard button {
+  background: none;
+	color: inherit;
+	padding: 0 10px 0 0;
+	margin-right: 10px;
+	font-family: 'RobotoSlab-Light';
+  font-size: 15px;
+  color: #4386bf;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#bookCard button:hover {
+  color: #9bb3c6
 }
 
 #addBook {

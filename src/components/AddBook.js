@@ -26,7 +26,7 @@ const AddBook = () => {
   };
 
   const postBook = async () => {
-    const newBook = await axios.post(`${api}/apps/wGWGzFIDteiCaiSsBeV3/books`, {
+    const newBook = await axios.post(`${api}`, {
       item_id: uuidv4(),
       title,
       author,
