@@ -35,8 +35,6 @@ li {
 
 #addBook .container {
   display: grid;
-
-  /* grid-template-columns: 4fr 4fr 3fr 2fr; */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;

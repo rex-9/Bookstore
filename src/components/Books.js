@@ -1,6 +1,4 @@
 /* eslint-disable max-len */
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable guard-for-in */
 
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -17,11 +15,11 @@ const Books = () => {
   useEffect(() => async () => {
     const booksObj = await axios.get(`${api}/apps/wGWGzFIDteiCaiSsBeV3/books`);
     if (booksObj.data) {
-      for (const itemId in booksObj.data) {
+      Object.keys(booksObj.data).forEach((itemId) => {
         const data = booksObj.data[itemId];
         const book = Object.assign({}, { item_id: itemId }, ...data);
         books.push(book);
-      }
+      });
       return dispatch(loadBooks());
     }
     return console.log('No book in api');
@@ -29,7 +27,7 @@ const Books = () => {
 
   return (
     <>
-      {books.map((book) => <Book key={book.item_id} id={book.item_id} title={book.title} author={book.author} />)}
+      {books.map((book) => (<Book key={book.item_id} id={book.item_id} title={book.title} author={book.author} />))}
       <AddBook />
     </>
   );
