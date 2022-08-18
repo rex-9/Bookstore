@@ -70,8 +70,21 @@ li {
   border: none;
 }
 
-input,
-#addBook button {
+.progress button {
+  padding: 5px 10px 5px 10px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-family: 'RobotoSlab-Thin', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+input {
   height: 40px;
   padding-left: 20px;
 }
@@ -125,7 +138,7 @@ input,
 }
 
 .completed {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', serif;
   font-size: 0.875rem;
   color: #121212;
   opacity: 0.5;
@@ -140,27 +153,13 @@ input,
   margin-bottom: 10px;
 }
 
-.progress button {
-  padding: 5px 10px 5px 10px;
-  letter-spacing: 0.5px;
-  color: #fff;
-  font-family: 'RobotoSlab-Thin';
-  font-size: 0.813rem;
-  font-weight: 300;
-  background-color: #0290ff;
-  border: none;
-  border-radius: 5px;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
 #addBook {
   padding: 15px 30px 15px 30px;
   margin: 25px 30px 25px 30px;
 }
 
 #addBook h2 {
-  font-family: Montserrat;
+  font-family: 'Montserrat', serif;
   font-weight: bold;
   text-transform: uppercase;
   color: #121212;
@@ -177,6 +176,7 @@ input,
 }
 
 #addBook button {
+  height: 40px;
   padding: 5px 10px 5px 10px;
   letter-spacing: 0.5px;
   color: #fff;
