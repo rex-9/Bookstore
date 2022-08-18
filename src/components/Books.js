@@ -13,12 +13,18 @@ const Books = () => {
   const dispatch = useDispatch();
 
   useEffect(() => async () => {
-    const booksObj = await axios.get(`${api}/apps/wGWGzFIDteiCaiSsBeV3/books`);
+    const booksObj = await axios.get(api);
     if (booksObj.data) {
       Object.keys(booksObj.data).forEach((itemId) => {
         const data = booksObj.data[itemId];
         const book = Object.assign({}, { item_id: itemId }, ...data);
-        books.push(book);
+        if (books.find((book) => book.item_id === itemId)) {
+          if (itemId !== books.find((book) => book.item_id === itemId).item_id) {
+            books.push(book);
+          }
+        } else {
+          books.push(book);
+        }
       });
       return dispatch(loadBooks());
     }
@@ -27,7 +33,7 @@ const Books = () => {
 
   return (
     <>
-      {books.map((book) => (<Book key={book.item_id} id={book.item_id} title={book.title} author={book.author} />))}
+      {books.map((book) => (<Book key={book.item_id} id={book.item_id} category={book.category} title={book.title} author={book.author} />))}
       <AddBook />
     </>
   );
