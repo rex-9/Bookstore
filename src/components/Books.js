@@ -12,10 +12,6 @@ const Books = () => {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
-  const noBookInApi = () => {
-
-  };
-
   useEffect(() => async () => {
     const booksObj = await axios.get(api);
     if (booksObj.data) {
@@ -32,7 +28,7 @@ const Books = () => {
       });
       return dispatch(loadBooks());
     }
-    return noBookInApi();
+    return console.log('No book in api');
   }, []);
 
   return (
