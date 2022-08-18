@@ -10,6 +10,10 @@ const hoverStyle = {
   textDecoration: 'none', fontFamily: 'Montserrat', color: '#121212', letterSpacing: '1.9px',
 };
 
+const userLogo = {
+  backgroundColor: 'white', borderRadius: '50%', padding: '5px',
+};
+
 const Nav = () => {
   const [bookHover, setBookHover] = useState(false);
   const [cateHover, setCateHover] = useState(false);
@@ -56,9 +60,7 @@ const Nav = () => {
       <img
         width="30px;"
         height="30px;"
-        style={{
-          backgroundColor: 'white', borderRadius: '50%', padding: '5px',
-        }}
+        style={userLogo}
         src={user}
         alt=""
       />
