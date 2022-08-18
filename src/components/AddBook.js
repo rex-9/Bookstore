@@ -38,7 +38,7 @@ const AddBook = () => {
 
   return (
     <div id="addBook">
-      <h2>Add Book</h2>
+      <h2>Add New Book</h2>
       <div className="container">
         <input type="text" placeholder="Add Title" value={title} onChange={changeTitle} />
         <input type="text" placeholder="Add Author" value={author} onChange={changeAuthor} />

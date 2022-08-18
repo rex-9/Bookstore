@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import user from '../assets/images/user.png';
 
 const style = {
   textDecoration: 'none', fontFamily: 'Montserrat', color: '#A7A7A7', letterSpacing: '1.9px',
@@ -52,7 +53,15 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-      <div>User Logo</div>
+      <img
+        width="30px;"
+        height="30px;"
+        style={{
+          backgroundColor: 'white', borderRadius: '50%', padding: '5px',
+        }}
+        src={user}
+        alt=""
+      />
     </nav>
   );
 };

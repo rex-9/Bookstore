@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'RobotoSlab';
-  src: local('RobotoSlab'), url(./assets/RobotoSlab-Medium.ttf) format('woff');
-  src: local('RobotoSlab-Regular'), url(./assets/RobotoSlab-Regular.ttf) format('woff');
-  src: local('RobotoSlab-Light'), url(./assets/RobotoSlab-Light.ttf) format('woff');
-  src: local('RobotoSlab-Thin'), url(./assets/RobotoSlab-Thin.ttf) format('woff');
-  src: local('RobotoSlab-Black'), url(./assets/RobotoSlab-Black.ttf) format('woff');
-  src: local('RobotoSlab-Bold'), url(./assets/RobotoSlab-Bold.ttf) format('woff');
-  src: local('RobotoSlab-ExtraBold'), url(./assets/RobotoSlab-ExtraBold.ttf) format('woff');
-  src: local('RobotoSlab-SemiBold'), url(./assets/RobotoSlab-SemiBold.ttf) format('woff');
+  src: local('RobotoSlab'), url(./assets/fonts/RobotoSlab-Medium.ttf) format('woff');
+  src: local('RobotoSlab-Regular'), url(./assets/fonts/RobotoSlab-Regular.ttf) format('woff');
+  src: local('RobotoSlab-Light'), url(./assets/fonts/RobotoSlab-Light.ttf) format('woff');
+  src: local('RobotoSlab-Thin'), url(./assets/fonts/RobotoSlab-Thin.ttf) format('woff');
+  src: local('RobotoSlab-Black'), url(./assets/fonts/RobotoSlab-Black.ttf) format('woff');
+  src: local('RobotoSlab-Bold'), url(./assets/fonts/RobotoSlab-Bold.ttf) format('woff');
+  src: local('RobotoSlab-ExtraBold'), url(./assets/fonts/RobotoSlab-ExtraBold.ttf) format('woff');
+  src: local('RobotoSlab-SemiBold'), url(./assets/fonts/RobotoSlab-SemiBold.ttf) format('woff');
 }
 
 body {
@@ -94,6 +94,17 @@ input,
 .progress {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 170px;
+  padding-right: 40px;
+  border-right: 1px solid #c2c6c9;
 }
 
 .circle {
@@ -107,9 +118,53 @@ input,
   border-image-slice: 1;
 }
 
+.noPer {
+  font-family: 'RobotoSlab-Thin', serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  font-family: 'Montserrat';
+  font-size: 0.875rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.curChap {
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.progress button {
+  padding: 5px 10px 5px 10px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-family: 'RobotoSlab-Thin';
+  font-size: 0.813rem;
+  font-weight: 300;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
 #addBook {
   padding: 15px 30px 15px 30px;
   margin: 25px 30px 25px 30px;
+}
+
+#addBook h2 {
+  font-family: Montserrat;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #121212;
+  opacity: 0.5;
 }
 
 #addBook .container {
@@ -119,4 +174,15 @@ input,
   grid-row-gap: 20px;
   justify-items: stretch;
   align-items: stretch;
+}
+
+#addBook button {
+  padding: 5px 10px 5px 10px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
