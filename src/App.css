@@ -70,7 +70,7 @@ li {
   border: none;
 }
 
-.progress button {
+#progress-button {
   padding: 5px 10px 5px 10px;
   letter-spacing: 0.5px;
   color: #fff;
@@ -82,6 +82,10 @@ li {
   border-radius: 5px;
   text-transform: uppercase;
   margin-top: 10px;
+}
+
+#progress-button:hover {
+  color: #9bb3c6;
 }
 
 input {
@@ -176,13 +180,17 @@ input {
 }
 
 #addBook button {
-  height: 40px;
+  height: 45px;
   padding: 5px 10px 5px 10px;
   letter-spacing: 0.5px;
   color: #fff;
   background-color: #0290ff;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
   text-transform: uppercase;
-  margin-top: 10px;
+}
+
+#addBook button:hover {
+  color: #9bb3c6;
 }

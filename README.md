@@ -1,7 +1,7 @@
 # BookStore
 
-> The amazing BookStore project will let you perform any basic
-> math calculations you want to perform.
+> The amazing BookStore project will let you display, add and remove the books you are currently reading.
+> The books are stored online.
 
 ## Built With
 
