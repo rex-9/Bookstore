@@ -6,10 +6,14 @@
 ## Built With
 
 - React
+- Redux
 
+## Screenshots
+
+![Rex's bookstore](./src/assets/images/bookstore.png)
 ## Live Demo
 
-[BookStore](https://bookstore.netlify.app/)
+[BookStore](https://rexbookstore.netlify.app/)
 
 ## Getting Started
 
@@ -37,16 +41,14 @@ To get a local copy up and running:
 
 ### Deployment
 
-Here is the online version of [BookStore](https://bookstore.netlify.app/)
+Here is the online version of [BookStore](https://rexbookstore.netlify.app/)
 
 ## Author
 
 👤 - Github: [@HtetNaing0814](https://github.com/HtetNaing0814/)<br>
 👤 - LinkedIn: [Htet Naing](https://www.linkedin.com/in/htetnaing0814/)<br>
 👤 - Facebook: [Htet Naing](https://www.facebook.com/rexsoul1819)<br>
-👤 - Angelist: [Htet Naing](https://angel.co/u/htet-naing-2)<br>
-
-
+👤 - Angelist: [Htet Naing](https://angel.co/u/htetnaing0814)<br>
 
 ## 🤝 Contributions
 
