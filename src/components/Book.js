@@ -40,7 +40,7 @@ const Book = (props) => {
         <div>
           <div className="curChap">Current Chapter</div>
           <div className="chapName">Chapter 7</div>
-          <button type="button">Update Progress</button>
+          <button id="progress-button" type="button">Update Progress</button>
         </div>
       </div>
     </div>
