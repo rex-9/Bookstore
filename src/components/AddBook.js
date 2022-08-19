@@ -36,6 +36,10 @@ const AddBook = () => {
     window.location.reload();
   };
 
+  const invalid = () => {
+
+  };
+
   return (
     <div id="addBook">
       <h2>Add New Book</h2>
@@ -43,7 +47,7 @@ const AddBook = () => {
         <input type="text" placeholder="Add Title" value={title} onChange={changeTitle} />
         <input type="text" placeholder="Add Author" value={author} onChange={changeAuthor} />
         <input type="text" placeholder="Add Category" value={category} onChange={changeCategory} onKeyPress={(e) => e.key === 'Enter' && postBook()} />
-        <button type="button" onClick={title !== '' && author !== '' && category !== '' ? postBook : () => console.log('form is empty')}>Add Book</button>
+        <button type="button" onClick={title !== '' && author !== '' && category !== '' ? postBook : () => invalid}>Add Book</button>
       </div>
     </div>
   );
