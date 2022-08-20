@@ -11,9 +11,6 @@
 ## Screenshots
 
 ![Rex's bookstore](./src/assets/images/bookstore.png)
-## Live Demo
-
-[BookStore](https://rexbookstore.netlify.app/)
 
 ## Getting Started
 
@@ -21,7 +18,7 @@ To get a local copy up and running:
 
 1. Clone this repository or download the zip folder:
 
-**`git clone https://github.com/HtetNaing0814/BookStore.git`**
+**`git clone https://github.com/rex-9/BookStore.git`**
 
 2. Navigate to the location of the folder in your machine:
 
@@ -41,20 +38,20 @@ To get a local copy up and running:
 
 ### Deployment
 
-Here is the online version of [BookStore](https://rexbookstore.netlify.app/)
+Here is the online version of [BookStore](https://rex9bookstore.netlify.app/)
 
 ## Author
 
-👤 - Github: [@HtetNaing0814](https://github.com/HtetNaing0814/)<br>
-👤 - LinkedIn: [Htet Naing](https://www.linkedin.com/in/htetnaing0814/)<br>
-👤 - Facebook: [Htet Naing](https://www.facebook.com/rexsoul1819)<br>
-👤 - Angelist: [Htet Naing](https://angel.co/u/htetnaing0814)<br>
+👤 - Github: [rex-9](https://github.com/rex-9/)<br>
+👤 - LinkedIn: [rex9](https://www.linkedin.com/in/rex9/)<br>
+👤 - Angelist: [rex9](https://angel.co/u/rex9)<br>
+👤 - Facebook: [Htet Naing](https://www.facebook.com/htetnaing0814)<br>
 
 ## 🤝 Contributions
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check [issue page](https://github.com/HtetNaing0814/BookStore/issues).
+Feel free to check [issue page](https://github.com/rex-9/BookStore/issues).
 
 ## Show your support
 
